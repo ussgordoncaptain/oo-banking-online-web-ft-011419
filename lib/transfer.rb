@@ -17,12 +17,13 @@ class Transfer
     end
     end
     @sender.balence -= @amount 
-    @receiver.balance += @amount
+    @receiver.balence += @amount
     @status = "complete"
   end
   def reverse_transfer
     if @status = "complete"
-      @status = 
+      @status = "rejected"
+      @sender.balence
     else
       return nil
     end
