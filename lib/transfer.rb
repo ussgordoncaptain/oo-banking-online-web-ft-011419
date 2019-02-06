@@ -30,4 +30,5 @@ class Transfer
       return nil
     end
   end
+  def valid?
 end
