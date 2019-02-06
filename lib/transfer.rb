@@ -8,12 +8,13 @@ class Transfer
   end
   attr_accessor :status
   def execute_transaction 
-    if @status = "complete" || @status = "reversed"
+    if @status == "complete" || @status = "reversed"
       return nil
     end
     if @amount > @sender.balence || @sender.status = "closed"  
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
+    end
     end
     @sender.balence -= @amount 
     @receiver.balance += @amount
