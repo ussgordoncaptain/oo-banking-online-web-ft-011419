@@ -28,4 +28,5 @@ class Transfer
     else
       return nil
     end
+  end
 end
