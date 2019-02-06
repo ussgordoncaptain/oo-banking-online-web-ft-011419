@@ -10,7 +10,7 @@ class BankAccount
     @balance += num
   end
   def valid?
-    if @status == "closed" || @balance > 0 
+    if @status != "closed" || @balance > 0 
       return true 
     else
        return false 
@@ -18,5 +18,8 @@ class BankAccount
    end
    def close_account
      @status = "closed"
+   end
+   def display_balance 
+     @balance 
    end
 end
