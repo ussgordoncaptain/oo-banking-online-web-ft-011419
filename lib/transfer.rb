@@ -24,7 +24,7 @@ class Transfer
     if @status = "complete"
       @status = "rejected"
       @sender.balence += @amount
-      @receiver.balence
+      @receiver.balence -= @amount
     else
       return nil
     end
