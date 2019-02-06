@@ -7,7 +7,7 @@ class Transfer
     @amount = num
   end
   attr_accessor :status
-  attr_reader :sender, :receiver, 
+  attr_reader :sender, :receiver, :amount
   def execute_transaction 
     if @status == "complete" || @status == "reversed"
       return nil
