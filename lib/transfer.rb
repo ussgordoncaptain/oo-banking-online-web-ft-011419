@@ -11,7 +11,7 @@ class Transfer
     if @status == "complete" || @status = "reversed"
       return nil
     end
-    if @amount > @sender.balence || @sender.status = "closed"  
+    if @amount > @sender.balence || @sender.status == "closed"  
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     end
