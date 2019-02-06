@@ -21,7 +21,7 @@ class Transfer
     @status = "complete"
   end
   def reverse_transfer
-    if @status = "complete"
+    if @status == "complete"
       @status = "rejected"
       @sender.balence += @amount
       @receiver.balence -= @amount
