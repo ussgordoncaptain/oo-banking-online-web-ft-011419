@@ -8,7 +8,7 @@ class Transfer
   end
   attr_accessor :status
   def execute_transaction 
-    if @status == "complete" || @status = "reversed"
+    if @status == "complete" || @status == "reversed"
       return nil
     end
     if @amount > @sender.balence || @sender.status == "closed"  
@@ -23,7 +23,8 @@ class Transfer
   def reverse_transfer
     if @status = "complete"
       @status = "rejected"
-      @sender.balence
+      @sender.balence += @amount
+      @receiver.balence
     else
       return nil
     end
