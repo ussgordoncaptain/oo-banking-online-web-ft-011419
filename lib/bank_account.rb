@@ -1,4 +1,4 @@
-class Bank_Account
+class BankAccount
   def initialize(name)
     @name = name
     @status = "open"
