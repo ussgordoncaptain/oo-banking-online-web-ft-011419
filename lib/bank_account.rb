@@ -13,7 +13,7 @@ class BankAccount
     if @status == "closed" || @balence > 0 
       return true 
     else
-     return false 
+       return false 
     end 
    end
    def close_account
